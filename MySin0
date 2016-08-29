@@ -1,0 +1,11 @@
+function y=MySin0(x,n)
+%  y=sin(x) approximated by Taylor expansion
+%       y : output array
+%       x : input array
+%       n : the order of Taylor expansion
+
+y=0.0;
+for k=1:n
+    term=(-1)^(k-1)*x.^(2*k-1)/factorial(2*k-1); %k-th order term in the series
+    y=y+term; % add the k-th order term to the result y
+end
